@@ -268,7 +268,7 @@
         .hero-form-card {
             background: transparent;
             border-radius: 16px;
-            padding: 2.5rem;
+            padding: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -279,56 +279,60 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
+            min-height: 400px;
         }
 
         .hero-logo-animation img {
-            width: 420px;
-            max-width: 100%;
+            width: 500px;
+            max-width: 95%;
             height: auto;
-            animation: logoFloat 4s ease-in-out infinite;
-            filter: drop-shadow(0 20px 40px rgba(220, 20, 60, 0.3)) drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+            animation: logoFloat 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 60px rgba(220, 20, 60, 0.25));
+            position: relative;
+            z-index: 2;
         }
 
         .hero-logo-glow {
             position: absolute;
-            width: 350px;
-            height: 350px;
+            width: 500px;
+            height: 400px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(220, 20, 60, 0.15) 0%, rgba(220, 20, 60, 0.05) 40%, transparent 70%);
-            animation: glowPulse 3s ease-in-out infinite;
-            z-index: -1;
+            background: radial-gradient(ellipse, rgba(220, 20, 60, 0.2) 0%, rgba(37, 99, 235, 0.08) 40%, transparent 65%);
+            animation: glowPulse 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+            z-index: 1;
         }
 
         .hero-logo-ring {
             position: absolute;
-            width: 380px;
-            height: 380px;
+            width: 420px;
+            height: 420px;
             border-radius: 50%;
-            border: 1px solid rgba(220, 20, 60, 0.2);
-            animation: ringExpand 4s ease-in-out infinite;
-            z-index: -1;
+            border: 1.5px solid rgba(255, 255, 255, 0.12);
+            animation: ringPulse 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+            z-index: 0;
         }
 
         .hero-logo-ring:nth-child(2) {
-            width: 440px;
-            height: 440px;
-            border-color: rgba(37, 99, 235, 0.1);
-            animation-delay: 1.5s;
+            width: 520px;
+            height: 520px;
+            border-color: rgba(220, 20, 60, 0.1);
+            animation-delay: 2s;
         }
 
         @keyframes logoFloat {
-            0%, 100% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(-12px) scale(1.02); }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
         }
 
         @keyframes glowPulse {
-            0%, 100% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.15); opacity: 1; }
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
         }
 
-        @keyframes ringExpand {
-            0%, 100% { transform: scale(0.95); opacity: 0.5; }
-            50% { transform: scale(1.05); opacity: 0.2; }
+        @keyframes ringPulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.15; transform: scale(1.03); }
         }
 
         .form-group {
@@ -1101,22 +1105,26 @@
             }
 
             .hero-logo-animation img {
-                width: 320px;
+                width: 380px;
+            }
+
+            .hero-logo-animation {
+                min-height: 320px;
             }
 
             .hero-logo-glow {
-                width: 280px;
-                height: 280px;
+                width: 380px;
+                height: 320px;
             }
 
             .hero-logo-ring {
-                width: 300px;
-                height: 300px;
+                width: 340px;
+                height: 340px;
             }
 
             .hero-logo-ring:nth-child(2) {
-                width: 350px;
-                height: 350px;
+                width: 420px;
+                height: 420px;
             }
 
             .options-grid {
@@ -1205,22 +1213,26 @@
             }
 
             .hero-logo-animation img {
-                width: 260px;
+                width: 300px;
+            }
+
+            .hero-logo-animation {
+                min-height: 250px;
             }
 
             .hero-logo-glow {
-                width: 220px;
-                height: 220px;
+                width: 300px;
+                height: 250px;
             }
 
             .hero-logo-ring {
-                width: 240px;
-                height: 240px;
+                width: 280px;
+                height: 280px;
             }
 
             .hero-logo-ring:nth-child(2) {
-                width: 280px;
-                height: 280px;
+                width: 340px;
+                height: 340px;
             }
         }
 
