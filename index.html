@@ -267,11 +267,13 @@
 
         .hero-form-card {
             background: transparent;
-            border-radius: 16px;
-            padding: 1rem;
+            border-radius: 0;
+            padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
+            border: none;
+            box-shadow: none;
         }
 
         .hero-logo-animation {
@@ -283,19 +285,16 @@
         }
 
         .hero-logo-animation img {
-            width: 580px;
+            width: 620px;
             max-width: 100%;
             height: auto;
-            animation: logoPop 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
-            border-radius: 0;
-            border: none;
-            outline: none;
-            box-shadow: none;
+            animation: logoPop 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 25px rgba(100, 180, 255, 0.5)) drop-shadow(0 0 60px rgba(100, 180, 255, 0.2));
         }
 
         @keyframes logoPop {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
+            50% { transform: scale(1.02); }
         }
 
         .form-group {
@@ -1273,7 +1272,7 @@
             </div>
             <div class="hero-form-card">
                 <div class="hero-logo-animation">
-                    <img src="assets/logo-hero-glow.png" alt="MPS Group Inc">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663427762431/aLmJmgNbxWD7Dmncb3P2zD/mps-logo-cinematic-transparent-4qGHTnEeQ7AR2KgLYSnxEa.png" alt="MPS Group Inc">
                 </div>
             </div>
         </div>
