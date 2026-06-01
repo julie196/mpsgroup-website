@@ -266,22 +266,69 @@
         }
 
         .hero-form-card {
-            background: var(--white);
+            background: transparent;
             border-radius: 16px;
             padding: 2.5rem;
-            box-shadow: var(--shadow-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .hero-form-card h3 {
-            font-size: 1.4rem;
-            color: var(--navy);
-            margin-bottom: 0.5rem;
+        .hero-logo-animation {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .hero-form-card p {
-            color: var(--gray-500);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
+        .hero-logo-animation img {
+            width: 420px;
+            max-width: 100%;
+            height: auto;
+            animation: logoFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 20px 40px rgba(220, 20, 60, 0.3)) drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+        }
+
+        .hero-logo-glow {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(220, 20, 60, 0.15) 0%, rgba(220, 20, 60, 0.05) 40%, transparent 70%);
+            animation: glowPulse 3s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .hero-logo-ring {
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            border: 1px solid rgba(220, 20, 60, 0.2);
+            animation: ringExpand 4s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .hero-logo-ring:nth-child(2) {
+            width: 440px;
+            height: 440px;
+            border-color: rgba(37, 99, 235, 0.1);
+            animation-delay: 1.5s;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-12px) scale(1.02); }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.15); opacity: 1; }
+        }
+
+        @keyframes ringExpand {
+            0%, 100% { transform: scale(0.95); opacity: 0.5; }
+            50% { transform: scale(1.05); opacity: 0.2; }
         }
 
         .form-group {
@@ -1053,6 +1100,25 @@
                 max-width: 500px;
             }
 
+            .hero-logo-animation img {
+                width: 320px;
+            }
+
+            .hero-logo-glow {
+                width: 280px;
+                height: 280px;
+            }
+
+            .hero-logo-ring {
+                width: 300px;
+                height: 300px;
+            }
+
+            .hero-logo-ring:nth-child(2) {
+                width: 350px;
+                height: 350px;
+            }
+
             .options-grid {
                 grid-template-columns: 1fr;
             }
@@ -1136,6 +1202,25 @@
 
             .hero-form-card {
                 padding: 1.75rem;
+            }
+
+            .hero-logo-animation img {
+                width: 260px;
+            }
+
+            .hero-logo-glow {
+                width: 220px;
+                height: 220px;
+            }
+
+            .hero-logo-ring {
+                width: 240px;
+                height: 240px;
+            }
+
+            .hero-logo-ring:nth-child(2) {
+                width: 280px;
+                height: 280px;
             }
         }
 
@@ -1250,44 +1335,11 @@
                 </div>
             </div>
             <div class="hero-form-card">
-                <h3>Get Your Free Consultation</h3>
-                <p>Tell us about your situation — no obligation, 100% confidential.</p>
-                <form id="heroForm" onsubmit="handleFormSubmit(event, 'hero')">
-                    <div class="form-group">
-                        <label for="hero-name">Full Name</label>
-                        <input type="text" id="hero-name" name="name" placeholder="Your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="hero-phone">Phone Number</label>
-                        <input type="tel" id="hero-phone" name="phone" placeholder="(555) 123-4567" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="hero-email">Email Address</label>
-                        <input type="email" id="hero-email" name="email" placeholder="you@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="hero-situation">Your Situation</label>
-                        <select id="hero-situation" name="situation">
-                            <option value="">Select your situation...</option>
-                            <option value="foreclosure">Facing Foreclosure</option>
-                            <option value="pre-foreclosure">Pre-Foreclosure</option>
-                            <option value="behind-payments">Behind on Payments</option>
-                            <option value="probate">Probate / Inherited Property</option>
-                            <option value="divorce">Divorce</option>
-                            <option value="other">Other / Just Exploring Options</option>
-                        </select>
-                    </div>
-                    <div class="tcpa-consent">
-                        <input type="checkbox" id="hero-consent" required>
-                        <label for="hero-consent">By submitting this form, I consent to receive calls, texts, and emails from MPS Group Inc regarding my property inquiry. Message & data rates may apply. Reply STOP to opt out.</label>
-                    </div>
-                    <button type="submit" class="form-submit">Get My Free Consultation →</button>
-                    <p class="form-disclaimer">🔒 Your information is 100% confidential and secure.</p>
-                </form>
-                <div class="form-success" id="heroSuccess">
-                    <div class="checkmark"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
-                    <h3>Thank You!</h3>
-                    <p>Douglas will reach out to you shortly to discuss your situation confidentially.</p>
+                <div class="hero-logo-animation">
+                    <div class="hero-logo-ring"></div>
+                    <div class="hero-logo-ring"></div>
+                    <div class="hero-logo-glow"></div>
+                    <img src="assets/logo-transparent.png" alt="MPS Group Inc Logo">
                 </div>
             </div>
         </div>
