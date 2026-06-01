@@ -1,0 +1,3 @@
+NOTE: attachedfile.jpg is actually the OLD MPS Group logo on a dark textured background - NOT Douglas May's headshot.
+The headshot was mentioned in the task context but the actual file appears to be a logo mockup.
+Will proceed with the website build without a personal photo, or use a placeholder approach.
