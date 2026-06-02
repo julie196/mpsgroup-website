@@ -1,0 +1,9 @@
+# MPS Group Inc - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mpsgroup.info/sitemap.xml
+
+# Crawl-delay (optional, be nice to crawlers)
+Crawl-delay: 1
