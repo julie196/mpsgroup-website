@@ -1,0 +1,27 @@
+# MPSGroup Inc. Website Recovery TODO
+
+- [x] Locate every MPSGroup Inc. project in the connected Netlify account.
+- [x] Confirm the existing GitHub repository `julie196/mpsgroup-website` and inspect its files; repository is currently public rather than private.
+- [x] Identify the current live MPSGroup Inc. URL and Netlify site ID.
+- [x] Recover and compare the Netlify deployment and GitHub source without modifying another client website.
+- [x] Compare the deployed site with the GitHub backup and determine whether recreation is necessary.
+- [x] Confirm that recreation or redeployment is not required because the live HTML exactly matches the GitHub backup.
+- [x] Verify the final live site on desktop and mobile.
+- [x] Confirm the complete MPSGroup Inc. source is backed up on GitHub; repository visibility is currently public.
+- [x] Record the live URL, GitHub URL, and Netlify site ID.
+- [x] Verify Douglas May’s brokerage affiliation using `arnirealtors.com` and other reliable records.
+- [x] Review the current Illinois real-estate advertising disclosure requirements from official sources.
+- [x] Determine the exact brokerage name and license disclosure language that can be published without guessing.
+- [x] Add the verified brokerage and Illinois license disclosures to the MPSGroup Inc. website.
+- [x] Preserve the current phone, email, lead form, navigation, design, and foreclosure content.
+- [x] Verify the disclosure text on desktop and mobile.
+- [x] Publish the verified disclosure update to the existing MPSGroup Inc. Netlify project.
+- [x] Back up the verified disclosure update to `julie196/mpsgroup-website`.
+- [x] Reproduce and inspect the MPSGroup contact-form submission payload to determine why the selected `Situation` is missing from Doug May’s email.
+- [x] Correct the form field or submission mapping so the homeowner’s situation appears clearly in the notification email without disrupting the existing lead flow.
+- [x] Remove every website-link and metadata reference to the inactive `mpsgroup.info` domain while preserving Doug’s active `Doug.May@MPSGroup.info` email address.
+- [x] Confirm the published site identifies ARNI Realty Inc. as Douglas May’s sponsoring brokerage.
+- [x] Add appropriate cache-versioning or cache-control measures so clients are less likely to see an older website revision.
+- [x] Verify the corrected site on desktop and mobile and confirm the form payload contains the situation value without sending a real email.
+- [ ] Publish the verified correction to the existing MPSGroup Netlify project and back it up to the existing GitHub repository.
+- [ ] Document exactly where the user can view MPSGroup traffic in Netlify.
