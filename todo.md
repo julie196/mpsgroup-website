@@ -23,5 +23,5 @@
 - [x] Confirm the published site identifies ARNI Realty Inc. as Douglas May’s sponsoring brokerage.
 - [x] Add appropriate cache-versioning or cache-control measures so clients are less likely to see an older website revision.
 - [x] Verify the corrected site on desktop and mobile and confirm the form payload contains the situation value without sending a real email.
-- [ ] Publish the verified correction to the existing MPSGroup Netlify project and back it up to the existing GitHub repository.
-- [ ] Document exactly where the user can view MPSGroup traffic in Netlify.
+- [x] Publish the verified correction to the existing MPSGroup Netlify project and back it up to the existing GitHub repository.
+- [x] Document exactly where the user can view MPSGroup traffic in Netlify.
